@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e3edb6;
+        }
+        .form-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #b094e9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .form-container button {
+            width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 1%;
+            border-radius: 4px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .login-btn {
+            background-color: #4CAF50;
+        }
+        .reset-btn {
+            background-color: #36f485;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Login</h2>
+    <form onsubmit="return validateForm()" action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required
+               pattern="^[a-zA-Z0-9]{4,12}$" title="Username must be 4-12 characters long, and can contain only letters and numbers.">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required
+               pattern=".{6,}" title="Password must be at least 6 characters long.">
+        
+<button type="submit" class="login-btn">Login</button>
+            <button type="reset" class="reset-btn">Reset</button>
+        
+    </form>
+</div>
+
+<script src="text.js">
+   
+</script>
+
+</body>
+</html>
+https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric
